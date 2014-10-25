@@ -18,6 +18,10 @@ public class Controller {
 		decider = new TheDecider();
 	}
 	
+	/**
+	 * Decides outfit.
+	 * @return
+	 */
 	public Outfit decideOutfit() {
 		return decider.decideOutfit(accessPreferences(), accessWardrobe());
 	}

@@ -1,7 +1,7 @@
 package controller;
 
 public class TheDecider {
-
+	State state;
 	
 	/**
 	 * Based on variables, intelligently instantiate one outfit and return it.
