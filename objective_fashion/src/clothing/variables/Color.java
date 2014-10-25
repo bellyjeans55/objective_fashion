@@ -1,5 +1,5 @@
 package clothing.variables;
 
 public enum Color {
-	RED, BLUE;
+	RED, BLUE, BLACK, GRAY, BROWN, WHITE, GREEN ;
 }
