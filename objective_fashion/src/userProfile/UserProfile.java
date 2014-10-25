@@ -1,4 +1,4 @@
-package UserProfile;
+package userProfile;
 public class UserProfile {
 	Wardrobe wardrobe;
 	Preferences preferences;
