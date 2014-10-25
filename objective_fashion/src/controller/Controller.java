@@ -1,7 +1,7 @@
 package controller;
 
+import clothing.Outfit;
 import userProfile.Preferences;
-
 import userProfile.UserProfile;
 import userProfile.Wardrobe;
 
@@ -36,6 +36,10 @@ public class Controller {
 	
 	public Preferences accessPreferences() {
 		return profile.getPreferences();
+	}
+	
+	public static void main(String[] args) {
+		
 	}
 	
 

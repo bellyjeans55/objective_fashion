@@ -31,5 +31,20 @@ public class Outfit {
 		
 	}
 	
+	/**
+	 * string representation of outfit
+	 */
+	public String toString() {
+		String str = "";
+		str += theTop.toString() + "\n------------------\n";
+		str += theBottom.toString() + "\n------------------\n";
+		str += theSocks.toString() + "\n------------------\n";
+		str += theShoes.toString() + "\n------------------\n";
+		str += theOuterwear.toString() + "\n------------------\n";
+		str += theSingleton.toString() + "\n------------------\n";
+		str += theAccessories.toString() + "\n------------------\n";
+		return str;
+	}
+	
 	
 }

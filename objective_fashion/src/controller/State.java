@@ -1,5 +1,5 @@
 package controller;
-
+import clothing.variables.AppropriateTemperature;
 import externalVariables.Weather;
 
 /**
@@ -10,10 +10,7 @@ import externalVariables.Weather;
  */
 public class State {
 	Weather weather;
-	TemperatureState temperatureState;
-	public enum TemperatureState {
-		VERY_HOT, HOT, WARM, COOL, COLD, VERY_COLD;
-	}
+	AppropriateTemperature temperatureState;
 	
 	public State() {
 		weather = new Weather();
@@ -26,20 +23,20 @@ public class State {
 	public void calculateTemperatureState() {
 		int temp = weather.getTemperature();
 		if (weather.getTemperature() < 20)
-			temperatureState = TemperatureState.VERY_COLD;
+			temperatureState = AppropriateTemperature.VERY_COLD;
 		else if (weather.getTemperature() < 40)
-			temperatureState = TemperatureState.COLD;
+			temperatureState = AppropriateTemperature.COLD;
 		else if (weather.getTemperature() < 55)
-			temperatureState = TemperatureState.COOL;
+			temperatureState = AppropriateTemperature.COOL;
 		else if (weather.getTemperature() < 70)
-			temperatureState = TemperatureState.WARM;
+			temperatureState = AppropriateTemperature.WARM;
 		else if (weather.getTemperature() < 85)
-			temperatureState = TemperatureState.HOT;
+			temperatureState = AppropriateTemperature.HOT;
 		else
-			temperatureState = TemperatureState.VERY_HOT;
+			temperatureState = AppropriateTemperature.VERY_HOT;
 	}
 	
-	public TemperatureState getTemperatureState() {
+	public AppropriateTemperature getTemperatureState() {
 		return temperatureState;
 	}
 }
