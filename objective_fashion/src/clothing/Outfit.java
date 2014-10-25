@@ -1,3 +1,4 @@
+package clothing;
 import clothing.generics.Accessories;
 import clothing.generics.Bottoms;
 import clothing.generics.Outerwear;
