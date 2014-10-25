@@ -30,4 +30,10 @@ public abstract class Clothing {
 	public Boolean isRainwear() {
 		return rainwear;
 	}
+	
+	public String toString() {
+		return "Appropriate Temp: " + temperature + "\nColor: " + color
+				+ "\nFormality: " + formality + "\nMaterial: " + material
+				+ "\nIs rainwear: " + rainwear;
+	}
 }
