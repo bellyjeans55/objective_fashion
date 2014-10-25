@@ -3,18 +3,56 @@ package userProfile;
 import java.util.Iterator;
 import java.util.Vector;
 
+import clothing.generics.Accessories;
 import clothing.generics.Bottoms;
 import clothing.generics.Outerwear;
 import clothing.generics.Shoes;
+import clothing.generics.Singletons;
+import clothing.generics.Socks;
 import clothing.generics.Tops;
 import clothing.variables.AppropriateTemperature;
 import clothing.variables.Formality;
 
 public class Wardrobe {
+	Vector<Accessories> accessories;
 	Vector<Bottoms> bottoms;
 	Vector<Outerwear> outerwear;
 	Vector<Shoes> shoes;
+	Vector<Singletons> singletons;
+	Vector<Socks> socks;
 	Vector<Tops> tops;
+	
+	public void addAccessories(Accessories accessory) {
+		accessories.addElement(accessory);
+	}
+	
+	public void addBottoms(Bottoms bottoms) {
+		this.bottoms.addElement(bottoms);
+	}
+	
+	public void addOuterwear(Outerwear outerwear) {
+		this.outerwear.addElement(outerwear);
+	}
+	
+	public void addShoes(Shoes shoes) {
+		this.shoes.addElement(shoes);
+	}
+	
+	public void addSingletons(Singletons singleton) {
+		singletons.addElement(singleton);
+	}
+	
+	public void addSocks(Socks socks) {
+		this.socks.addElement(socks);
+	}
+	
+	public void addTops(Tops top) {
+		tops.addElement(top);
+	}
+	
+	public Vector<Accessories> getAccessories() {
+		return accessories;
+	}
 	
 	public Vector<Bottoms> getBottoms(AppropriateTemperature temp, Formality formality) {
 		Vector<Bottoms> appropriateBottoms = new Vector<Bottoms>();
@@ -56,6 +94,14 @@ public class Wardrobe {
 			}
 		}
 		return appropriateShoes;
+	}
+	
+	public Vector<Singletons> getSingletons() {
+		return singletons;
+	}
+	
+	public Vector<Socks> getSocks() {
+		return socks;
 	}
 	
 	public Vector<Tops> getTops(AppropriateTemperature temp, Formality formality) {
