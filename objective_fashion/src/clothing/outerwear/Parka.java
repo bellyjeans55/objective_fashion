@@ -1,4 +1,4 @@
-package outerwear;
+package clothing.outerwear;
 
 import clothing.generics.Outerwear;
 

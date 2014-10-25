@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 import clothing.generics.Accessories;
 import clothing.generics.Bottoms;
 import clothing.generics.Outerwear;
@@ -16,7 +14,7 @@ public class Outfit {
 	Shoes theShoes;
 	Outerwear theOuterwear;
 	Singletons theSingleton;
-	ArrayList<Accessories> theAccessories; //array list to add multiple accessories
+	Accessories[] theAccessories; //array to add multiple accessories
 	
 	
 	//constructor passes already created objects from wardrobe
@@ -27,10 +25,8 @@ public class Outfit {
 		theShoes=shoes;
 		theOuterwear=outerwear;
 		theSingleton=singleton;
-	//accessories loop to add all items
-		for (int i=0; i < accessories.length; i++) {
-			theAccessories.add(accessories[i]);
-		}
+		theAccessories=accessories;
+	
 		
 	}
 	
