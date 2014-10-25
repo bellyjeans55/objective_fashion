@@ -7,4 +7,12 @@ public class UserProfile {
 		this.wardrobe = wardrobe;
 		this.preferences = preferences;
 	}
+	
+	public Wardrobe getWardrobe() {
+		return wardrobe;
+	}
+	
+	public Preferences getPreferences() {
+		return preferences;
+	}
 }
