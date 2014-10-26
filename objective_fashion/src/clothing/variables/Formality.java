@@ -11,4 +11,21 @@ public enum Formality {
 	 *  Formal - suit, oxford shoes, heads of your enemies
 	 */
 	CASUAL, SMART_CASUAL, BUSINESS_CASUAL, FORMAL;
+	
+	public String toString() {
+		String str = "";
+		switch(this) {
+		case BUSINESS_CASUAL: str = "Business Casual";
+			break;
+		case CASUAL: str = "Casual";
+			break;
+		case FORMAL: str = "Formal";
+			break;
+		case SMART_CASUAL: str = "Smart Casual";
+			break;
+		default:
+			break;
+		}
+		return str;
+	}
 }

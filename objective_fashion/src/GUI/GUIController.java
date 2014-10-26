@@ -2,6 +2,7 @@ package GUI;
 
 import javax.swing.DefaultListModel;
 
+import userProfile.Preferences;
 import clothing.generics.Clothing;
 
 public class GUIController {
@@ -21,5 +22,14 @@ public class GUIController {
 	
 	public void addToWardrobe(Clothing article) {
 		wardrobeModel.addElement(article);
+	}
+	
+	public String getEmail() {
+		return informationActionPanel.getEmail();
+	}
+	
+	public Preferences getPreferences() {
+		Preferences pref = new Preferences(informationActionPanel.getFormality());
+		return pref;
 	}
 }
