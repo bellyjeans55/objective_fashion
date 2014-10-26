@@ -10,7 +10,7 @@ public class Weather {
 		// create a instance of a wunderground data reader
 		HttpDataReaderService dataReader = new HttpDataReaderService();
 
-		// select a wunderground weather station (ID "KMABOSTO32" = somewhere)
+		// select a wunderground weather station (ID "KNCCHAPE17" = Cosgrove Hill, Chapel Hill
 		WeatherStation weatherStation = new WeatherStation("KNCCHAPE17");
 
 		// set selected weather station to data reader
