@@ -17,7 +17,7 @@ import javax.mail.internet.MimeMessage;
 import clothing.Outfit;
 
 public class Mailer {
-	Outfit outfit;
+	//private static Outfit outfit; //does not need outfit variable
 	private static String USER_NAME = "objectivefashion";  // GMail user name (just the part before "@gmail.com")
 	private static String PASSWORD = "rafdidasrhot"; // GMail password
 	private static DateFormat DATEFORMAT = new SimpleDateFormat("yyyy/MM/dd");
@@ -25,8 +25,8 @@ public class Mailer {
 	
 
 
-	public void sendOutfit(Outfit outfit, String recipient) {
-		this.outfit=outfit;
+	public static void sendOutfit(Outfit outfit, String recipient) {
+		//Mailer.outfit=outfit;
 		String from = USER_NAME;
         String pass = PASSWORD;
         String[] to = { recipient }; // list of recipient email addresses
