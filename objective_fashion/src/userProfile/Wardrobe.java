@@ -22,6 +22,16 @@ public class Wardrobe {
 	Vector<Socks> socks;
 	Vector<Tops> tops;
 	
+	public Wardrobe() {
+		accessories = new Vector<Accessories>();
+		bottoms = new Vector<Bottoms>();
+		outerwear = new Vector<Outerwear>();
+		shoes = new Vector<Shoes>();
+		singletons = new Vector<Singletons>();
+		socks = new Vector<Socks>();
+		tops = new Vector<Tops>();
+	}
+	
 	public void addAccessories(Accessories accessory) {
 		accessories.addElement(accessory);
 	}
