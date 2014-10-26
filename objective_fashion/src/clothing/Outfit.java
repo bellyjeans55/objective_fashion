@@ -9,26 +9,24 @@ import clothing.generics.Tops;
 
 
 public class Outfit {
-	Tops theTop;
-	Bottoms theBottom;
-	Socks theSocks;
-	Shoes theShoes;
-	Outerwear theOuterwear;
-	Singletons theSingleton;
-	Accessories[] theAccessories; //array to add multiple accessories
+	Tops top;
+	Bottoms bottom;
+	Socks socks;
+	Shoes shoes;
+	Outerwear outerwear;
+	Singletons singleton;
+	Accessories[] accessories; //array to add multiple accessories
 	
 	
 	//constructor passes already created objects from wardrobe
 	public Outfit(Tops top, Bottoms bottom, Socks sock, Shoes shoes, Outerwear outerwear, Singletons singleton, Accessories[] accessories) {
-		theTop=top;
-		theBottom=bottom;
-		theSocks=sock;
-		theShoes=shoes;
-		theOuterwear=outerwear;
-		theSingleton=singleton;
-		theAccessories=accessories;
-	
-		
+		this.top=top;
+		this.bottom=bottom;
+		this.socks=sock;
+		this.shoes=shoes;
+		this.outerwear=outerwear;
+		this.singleton=singleton;
+		this.accessories=accessories;
 	}
 	
 	/**
@@ -36,15 +34,24 @@ public class Outfit {
 	 */
 	public String toString() {
 		String str = "";
-		str += theTop.toString() + "\n------------------\n";
-		str += theBottom.toString() + "\n------------------\n";
-		str += theSocks.toString() + "\n------------------\n";
-		str += theShoes.toString() + "\n------------------\n";
-		str += theOuterwear.toString() + "\n------------------\n";
-		str += theSingleton.toString() + "\n------------------\n";
-		str += theAccessories.toString() + "\n------------------\n";
+		if (singleton != null) {
+			str += "One piece: " + singleton.toString();
+		} else {
+			str += "Top: " + top.toString();
+			str += "\nBottom: " + bottom.toString();
+		}
+		str += "Socks: " + socks.toString();
+		str += "Shoes: " + shoes.toString();
+		if (outerwear != null) {
+			str += "\nOuterwear: " + outerwear.toString();
+		}
+		if (accessories.length > 0) {
+			str += "\nAccessories:";
+			for (int i = 0; i < accessories.length; i++) {
+				str += " " + accessories[i].toString();
+			}
+		}
 		return str;
 	}
-	
 	
 }
