@@ -57,6 +57,7 @@ import javax.swing.GroupLayout;
 	     * @param args the command line arguments
 	     */
 	    public static void main(String args[]) {
+	    	System.out.println("this works");
 	        try {
 	            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
 	                if ("Nimbus".equals(info.getName())) {
