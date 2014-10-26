@@ -86,9 +86,10 @@ public class Controller {
 		return profile.getPreferences();
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) { //calculates outfit twice, should make outfit variable
 		Controller controller = new Controller();
-		System.out.println(controller.decideOutfit());
+		System.out.println(controller.decideOutfit()); 
+		Mailer.sendOutfit(controller.decideOutfit(), "j5r5myk@gmail.com"); //mail outfit
 		
 	}
 	

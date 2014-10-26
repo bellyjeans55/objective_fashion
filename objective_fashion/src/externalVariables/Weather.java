@@ -19,7 +19,7 @@ public class Weather {
 		// set selected weather station to data reader
 		dataReader.setWeatherStation(weatherStation);
 		
-		// set temperature
+		// set temperature and rain
 		temperature = dataReader.getCurrentData().getTemperature().intValue();
 		rain = dataReader.getCurrentData().getRainRateHourlyMm().intValue();
 	}
