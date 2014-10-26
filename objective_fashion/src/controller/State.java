@@ -21,16 +21,16 @@ public class State {
 	 * calculates weather state based on temperature
 	 */
 	public void calculateTemperatureState() {
-		int temp = weather.getTemperature();
-		if (weather.getTemperature() < 20)
+		int temperature = weather.getTemperature();
+		if (temperature < 20)
 			temperatureState = AppropriateTemperature.VERY_COLD;
-		else if (weather.getTemperature() < 40)
+		else if (temperature < 40)
 			temperatureState = AppropriateTemperature.COLD;
-		else if (weather.getTemperature() < 55)
+		else if (temperature < 55)
 			temperatureState = AppropriateTemperature.COOL;
-		else if (weather.getTemperature() < 70)
+		else if (temperature < 70)
 			temperatureState = AppropriateTemperature.WARM;
-		else if (weather.getTemperature() < 85)
+		else if (temperature < 85)
 			temperatureState = AppropriateTemperature.HOT;
 		else
 			temperatureState = AppropriateTemperature.VERY_HOT;
