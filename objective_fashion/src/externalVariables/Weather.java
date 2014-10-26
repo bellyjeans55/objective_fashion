@@ -6,7 +6,7 @@ import de.mbenning.weather.wunderground.impl.services.HttpDataReaderService;
 public class Weather {
 	public static int temperature;
 	
-	public static void calculateWeather() {
+	private static void calculateWeather() {
 		// create a instance of a wunderground data reader
 		HttpDataReaderService dataReader = new HttpDataReaderService();
 
@@ -22,7 +22,8 @@ public class Weather {
 	}
 	
 	
-	public int getTemperature() {
+	public static int getTemperature() {
+		calculateWeather();
 		return temperature;
 	}
 

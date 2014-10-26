@@ -9,19 +9,13 @@ import externalVariables.Weather;
  *
  */
 public class State {
-	Weather weather;
-	AppropriateTemperature temperatureState;
-	
-	public State() {
-		weather = new Weather(50);
-		calculateTemperatureState();
-	}
-	
+
 	/**
 	 * calculates weather state based on temperature
 	 */
-	public void calculateTemperatureState() {
-		int temperature = weather.getTemperature();
+	private static AppropriateTemperature calculateTemperatureState() {
+		AppropriateTemperature temperatureState;
+		int temperature = Weather.getTemperature();
 		if (temperature < 20)
 			temperatureState = AppropriateTemperature.VERY_COLD;
 		else if (temperature < 40)
@@ -34,9 +28,10 @@ public class State {
 			temperatureState = AppropriateTemperature.HOT;
 		else
 			temperatureState = AppropriateTemperature.VERY_HOT;
+		return temperatureState;
 	}
 	
-	public AppropriateTemperature getTemperatureState() {
-		return temperatureState;
+	public static AppropriateTemperature getTemperatureState() {
+		return calculateTemperatureState();
 	}
 }
