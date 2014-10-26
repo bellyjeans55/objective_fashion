@@ -8,10 +8,10 @@ import clothing.variables.Material;
 
 public class Romper extends Singletons{
 
-	public Romper(Color color, Formality formality,
-			AppropriateTemperature temperature, Material material) {
+	public Romper(Color color, Material material) {
 		super(color, material);
-		
+		this.formality = Formality.CASUAL;
+		this.temperature = AppropriateTemperature.HOT;
 	}
 
 	public String toString() {

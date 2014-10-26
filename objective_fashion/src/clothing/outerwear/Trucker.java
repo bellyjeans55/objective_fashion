@@ -7,8 +7,7 @@ import clothing.variables.Material;
 
 public class Trucker extends Outerwear {
 	
-	public Trucker(Color color, Formality formality,
-			AppropriateTemperature temperature, Material material) {
+	public Trucker(Color color, Material material) {
 		super(color, material);
 		this.formality = Formality.CASUAL;
 		this.temperature = AppropriateTemperature.COOL;

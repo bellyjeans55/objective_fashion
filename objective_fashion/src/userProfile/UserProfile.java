@@ -1,4 +1,7 @@
 package userProfile;
+
+import clothing.generics.Clothing;
+
 public class UserProfile {
 	Wardrobe wardrobe;
 	Preferences preferences;
@@ -14,5 +17,13 @@ public class UserProfile {
 	
 	public Preferences getPreferences() {
 		return preferences;
+	}
+	
+	public void setPreferences(Preferences preferences) {
+		this.preferences = preferences;
+	}
+	
+	public void addToWardrobe(Clothing article) {
+		wardrobe.addToWardrobe(article);
 	}
 }

@@ -9,10 +9,10 @@ import clothing.variables.Material;
 public class Tee extends Tops {
 	Boolean graphic; // is it a graphic tee?
 	
-	public Tee(Color color, Formality formality,
-			AppropriateTemperature temperature, Material material) {
-		super(color, formality, temperature, material);
-		// TODO Auto-generated constructor stub
+	public Tee(Color color, Material material) {
+		super(color, material);
+		this.formality = Formality.CASUAL;
+		this.temperature = AppropriateTemperature.HOT;
 	}
 	
 	public String toString() {

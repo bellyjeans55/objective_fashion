@@ -8,6 +8,11 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
+import userProfile.Preferences;
+import controller.Controller;
+import clothing.variables.Formality;
+import externalVariables.Weather;
+
 public class InformationActionPanel extends JPanel{
 	GroupLayout layout;
 	JComboBox typeBox;
@@ -20,11 +25,14 @@ public class InformationActionPanel extends JPanel{
 	JTextArea weatherTextArea;
 	JButton createButton;
 	JComboBox formalityBox;
-	GUIController controller;
+	GUIController guicontroller;
+	Controller controller;
+	
 
-	public InformationActionPanel(GUIController controller) {
+	public InformationActionPanel(GUIController guicontroller, Controller controller) {
 		initComponents();
 		initLayout();
+		this.guicontroller = guicontroller;
 		this.controller = controller;
 		setPreferredSize(new java.awt.Dimension(200, 300));
         setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -46,7 +54,8 @@ public class InformationActionPanel extends JPanel{
 
         emailTextField.setText("Enter Email Here...");
 
-        formalityBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Formality", "Casual", "Smart Casual", "Business Casual", "Formal" }));
+        formalityBox.setModel(new javax.swing.DefaultComboBoxModel(new Formality[] { Formality.CASUAL, Formality.SMART_CASUAL, 
+        		Formality.BUSINESS_CASUAL, Formality.FORMAL}));
         formalityBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
             
@@ -56,15 +65,16 @@ public class InformationActionPanel extends JPanel{
         createButton.setText("Create Outfit");
         createButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                
+                controller.sendOutfit(new Preferences(getFormality()), getEmail());
             }
         });
 
         weatherTextArea.setColumns(20);
-        weatherTextArea.setRows(5);
-        weatherTextArea.setText("Current Weather in Chapel Hill\nTemp (F): \nForecast:");
-        weatherTextArea.setMaximumSize(new java.awt.Dimension(164, 94));
+        weatherTextArea.setRows(3);
+        weatherTextArea.setText("Current Weather in Chapel Hill\nTemp (F): " + Weather.getTemperature() + " degrees");
+        weatherTextArea.setMaximumSize(new java.awt.Dimension(164, 64));
         weatherTextArea.setName(""); 
+        weatherTextArea.setEditable(false);
 
         preferencesLabel.setText("Preferences:");
 
@@ -118,8 +128,16 @@ public class InformationActionPanel extends JPanel{
                     .addContainerGap())
             );
     }
+	
+	public String getEmail() {
+		return emailTextField.getText();
+	}
+	
+	public Formality getFormality() {
+		return (Formality) formalityBox.getSelectedItem();
+	}
 
 	public void setController(GUIController controller) {
-		this.controller = controller;
+		this.guicontroller = controller;
 	}
 }

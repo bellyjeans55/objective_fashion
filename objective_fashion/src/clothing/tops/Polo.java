@@ -9,9 +9,10 @@ import clothing.variables.Material;
 public class Polo extends Tops {
 
 	
-	public Polo(Color color, Formality formality,
-			AppropriateTemperature temperature, Material material) {
-		super(color, formality, temperature, material);
+	public Polo(Color color, Material material) {
+		super(color, material);
+		this.formality = Formality.CASUAL;
+		this.temperature = AppropriateTemperature.WARM;
 	}
 
 	public String toString() {
