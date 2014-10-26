@@ -33,24 +33,23 @@ import javax.swing.GroupLayout;
 	        GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
 	        getContentPane().setLayout(layout);
 	        layout.setHorizontalGroup(
-	            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-	            .addGroup(layout.createSequentialGroup()
-	                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-	                    .addComponent(informationActionPanel, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-	                    .addComponent(addItemPanel, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-	                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-	                .addComponent(wardrobePanel, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-	        );
-	        layout.setVerticalGroup(
-	            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-	            .addGroup(GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-	                .addGap(0, 0, Short.MAX_VALUE)
-	                .addComponent(informationActionPanel, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-	                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-	                .addComponent(addItemPanel, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-	            .addComponent(wardrobePanel, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-	        );
-
+	                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+	                .addGroup(layout.createSequentialGroup()
+	                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+	                        .addComponent(informationActionPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE)
+	                        .addComponent(addItemPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 396, Short.MAX_VALUE))
+	                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+	                    .addComponent(wardrobePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+	            );
+	            layout.setVerticalGroup(
+	                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+	                .addComponent(wardrobePanel, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+	                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+	                    .addComponent(informationActionPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+	                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+	                    .addComponent(addItemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))
+	            );
+	            
 	        pack();
 	    }
 
