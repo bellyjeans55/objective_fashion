@@ -78,7 +78,7 @@ public class Controller {
 	public void sendOutfit(Preferences preferences, String email) {
 		profile.setPreferences(preferences);
 		Outfit outfit = decideOutfit();
-		outfitWarnings = null;
+		outfitWarnings = "";
 		if ((State.getTemperatureState() == AppropriateTemperature.COLD
 				|| State.getTemperatureState() == AppropriateTemperature.COOL
 				|| State.getTemperatureState() == AppropriateTemperature.VERY_COLD)
