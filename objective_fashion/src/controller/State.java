@@ -13,8 +13,8 @@ public class State {
 	AppropriateTemperature temperatureState;
 	
 	public State() {
-		weather = new Weather();
-		temperatureState = null;
+		weather = new Weather(50);
+		calculateTemperatureState();
 	}
 	
 	/**

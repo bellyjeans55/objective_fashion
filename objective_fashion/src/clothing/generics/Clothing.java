@@ -15,6 +15,14 @@ public abstract class Clothing {
 	public AppropriateTemperature getAppropriateTemperature() {
 		return temperature;
 	}
+	
+	public void setAppropriateTemperature(AppropriateTemperature temperature) {
+		this.temperature = temperature;
+	}
+	
+	public void setFormality(Formality formality) {
+		this.formality = formality;
+	}
 	public Color getColor() {
 		return color;
 	}
