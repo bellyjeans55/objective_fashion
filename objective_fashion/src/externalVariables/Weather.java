@@ -5,6 +5,9 @@ import de.mbenning.weather.wunderground.impl.services.HttpDataReaderService;
 
 public class Weather {
 	public static int temperature;
+	public static int rain;
+	
+
 	
 	private static void calculateWeather() {
 		// create a instance of a wunderground data reader
@@ -18,13 +21,18 @@ public class Weather {
 		
 		// set temperature
 		temperature = dataReader.getCurrentData().getTemperature().intValue();
-		
+		rain = dataReader.getCurrentData().getRainRateHourlyMm().intValue();
 	}
 	
 	
 	public static int getTemperature() {
 		calculateWeather();
 		return temperature;
+	}
+	
+	public static int getRain() {
+		calculateWeather();
+		return rain;
 	}
 
 }

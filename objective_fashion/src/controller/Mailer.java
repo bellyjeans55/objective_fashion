@@ -24,9 +24,6 @@ public class Mailer {
 	
 	
 
-//	public Mailer() {
-//		
-//	}
 
 	public void sendOutfit(Outfit outfit, String recipient) {
 		this.outfit=outfit;
