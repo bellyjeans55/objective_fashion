@@ -25,7 +25,7 @@ public class Mailer {
 	
 
 
-	public static void sendOutfit(Outfit outfit, String recipient) {
+	public static void sendOutfit(Outfit outfit, String warnings, String recipient) {
 		//Mailer.outfit=outfit;
 		String from = USER_NAME;
         String pass = PASSWORD;
@@ -33,6 +33,7 @@ public class Mailer {
         Date date = new Date();
         String subject = "Here is your outfit for " + DATEFORMAT.format(date);
         String body = outfit.toString();
+        body += warnings;
 
         sendFromGMail(from, pass, to, subject, body);
 		

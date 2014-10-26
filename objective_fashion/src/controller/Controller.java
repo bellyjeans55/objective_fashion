@@ -23,6 +23,7 @@ import userProfile.Wardrobe;
 public class Controller {
 	TheDecider decider;
 	UserProfile profile;
+	String outfitWarnings;
 	
 	public Controller() {
 		decider = new TheDecider();
@@ -75,8 +76,23 @@ public class Controller {
 	}
 	
 	public void sendOutfit(Preferences preferences, String email) {
+		Outfit outfit = decideOutfit();
+		outfitWarnings = null;
+		if ((State.getTemperatureState() == AppropriateTemperature.COLD
+				|| State.getTemperatureState() == AppropriateTemperature.COOL
+				|| State.getTemperatureState() == AppropriateTemperature.VERY_COLD)
+				&& outfit.getOuterwear() == null)
+			outfitWarnings += "\nYou need new outerwear.";
+		if (outfit.getBottom() == null)
+			outfitWarnings += "\nYou need new pants.";;
+		if (outfit.getShoes() == null)
+			outfitWarnings += "\nYou need new shoes.";;
+		if (outfit.getTop() == null)
+			outfitWarnings += "\nYou need a new top.";;
+		if (outfit.getSocks() == null)
+			outfitWarnings += "\nYou need new socks.";;
 		profile.setPreferences(preferences);
-		Mailer.sendOutfit(decideOutfit(), email);
+		Mailer.sendOutfit(outfit, outfitWarnings, email);
 	}
 	
 
