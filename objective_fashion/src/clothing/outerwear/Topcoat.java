@@ -8,9 +8,10 @@ import clothing.variables.Material;
 
 public class Topcoat extends Outerwear {
 
-	public Topcoat(Color color, Formality formality,
-			AppropriateTemperature temperature, Material material) {
-		super(color, formality, temperature, material);
+	public Topcoat(Color color, Material material) {
+		super(color, material);
+		this.formality = Formality.SMART_CASUAL;
+		this.temperature = AppropriateTemperature.COLD;
 	}
 
 	public String toString() {

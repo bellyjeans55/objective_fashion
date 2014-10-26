@@ -6,6 +6,8 @@ import clothing.variables.Formality;
 
 public abstract class Accessories extends Clothing {
 	public Accessories(Color color, Formality formality, AppropriateTemperature temperature) {
-		super(color, formality, temperature);
+		super(color);
+		this.formality = formality;
+		this.temperature = temperature;
 	}
 }

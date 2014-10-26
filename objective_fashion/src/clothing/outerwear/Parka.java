@@ -8,9 +8,10 @@ import clothing.variables.Material;
 
 public class Parka extends Outerwear {
 
-	public Parka(Color color, Formality formality,
-			AppropriateTemperature temperature, Material material) {
-		super(color, formality, temperature, material);
+	public Parka(Color color, Material material) {
+		super(color, material);
+		this.formality = Formality.CASUAL;
+		this.temperature = AppropriateTemperature.COLD;
 	}
 
 	public String toString() {

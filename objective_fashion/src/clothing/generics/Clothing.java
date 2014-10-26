@@ -6,16 +6,14 @@ import clothing.variables.Formality;
 import clothing.variables.Material;
 
 public abstract class Clothing {
-	AppropriateTemperature temperature;
+	protected AppropriateTemperature temperature;
 	Color color;
-	Formality formality;
+	protected Formality formality;
 	Material material;
 	Boolean rainwear;
 	
-	public Clothing(Color color, Formality formality, AppropriateTemperature temperature) {
+	public Clothing(Color color) {
 		this.color = color;
-		this.formality = formality;
-		this.temperature = temperature;
 	}
 	
 	

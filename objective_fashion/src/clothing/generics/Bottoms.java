@@ -6,8 +6,15 @@ import clothing.variables.Formality;
 import clothing.variables.Material;
 
 public abstract class Bottoms extends Clothing {
-	public Bottoms (Color color, Formality formality, AppropriateTemperature temperature, Material material) {
-		super(color, formality, temperature);
+	public Bottoms (Color color, Material material) {
+		super(color);
 		this.material = material;
+		if (material == Material.WOOL) {
+			formality = Formality.SMART_CASUAL;
+			temperature = AppropriateTemperature.COLD;
+		} else {
+			formality = Formality.CASUAL;
+			temperature = AppropriateTemperature.COOL;
+		}
 	}
 }

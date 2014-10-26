@@ -7,9 +7,10 @@ import clothing.variables.Material;
 
 public class Bomber extends Outerwear {
 
-	public Bomber(Color color, Formality formality,
-			AppropriateTemperature temperature, Material material) {
-		super(color, formality, temperature, material);
+	public Bomber(Color color, Material material) {
+		super(color, material);
+		this.formality = Formality.CASUAL;
+		this.temperature = AppropriateTemperature.COOL;
 	}
 
 	public String toString() {
