@@ -2,22 +2,26 @@ package GUI;
 
 import javax.swing.GroupLayout;
 
+import controller.Controller;
+
 	public class ObjectiveFashionGUI extends javax.swing.JFrame {
 
 		private InformationActionPanel informationActionPanel;
 	    private WardrobePanel wardrobePanel;
 	    private AddItemPanel addItemPanel;
-	    private GUIController controller;
+	    private GUIController guicontroller;
+	    private Controller controller;
 	    
 	    /**
 	     * Creates new form objectiveGUI
 	     */
 	    public ObjectiveFashionGUI() {
+	    	controller = new Controller();
 	        initComponents();
-	        controller = new GUIController(informationActionPanel, wardrobePanel, addItemPanel);
-	        informationActionPanel.setController(controller);
-	        wardrobePanel.setController(controller);
-	        addItemPanel.setController(controller);
+	        guicontroller = new GUIController(informationActionPanel, wardrobePanel, addItemPanel);
+	        informationActionPanel.setController(guicontroller);
+	        wardrobePanel.setController(guicontroller);
+	        addItemPanel.setController(guicontroller);
 	    }
 
 	    /**
@@ -26,9 +30,9 @@ import javax.swing.GroupLayout;
 	    @SuppressWarnings("unchecked")
 	    private void initComponents() {
 
-	        addItemPanel = new AddItemPanel(controller);
-	        informationActionPanel = new InformationActionPanel(controller);
-	        wardrobePanel = new WardrobePanel(controller);
+	        addItemPanel = new AddItemPanel(guicontroller, controller);
+	        informationActionPanel = new InformationActionPanel(guicontroller, controller);
+	        wardrobePanel = new WardrobePanel(guicontroller);
 
 	        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 

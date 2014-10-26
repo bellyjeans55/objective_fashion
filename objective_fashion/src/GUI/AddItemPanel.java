@@ -19,6 +19,7 @@ import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import controller.Controller;
 import clothing.accessories.Ring;
 import clothing.generics.Clothing;
 import clothing.generics.Socks;
@@ -31,9 +32,11 @@ public class AddItemPanel extends JPanel {
 	JComboBox colorBox;
 	JComboBox materialBox;
 	JButton addButton;
-	GUIController controller;
+	GUIController guicontroller;
+	Controller controller;
 	
-	public AddItemPanel(GUIController controller) {
+	public AddItemPanel(GUIController guicontroller, Controller controller) {
+		this.guicontroller = guicontroller;
 		this.controller = controller;
         initComponents();
 		initLayout();
@@ -42,7 +45,7 @@ public class AddItemPanel extends JPanel {
 	}
 	
 	public void addToWardrobe(Clothing article) {
-		controller.addToWardrobe(article);
+		guicontroller.addToWardrobe(article);
 	}
 	
 	@SuppressWarnings({ "unchecked", "rawtypes" })
@@ -92,7 +95,8 @@ public class AddItemPanel extends JPanel {
         	public void actionPerformed(ActionEvent e) {
             	Clothing article = getCurrentClothing();
             	if (article != null)
-            		controller.addToWardrobe(article);
+            		guicontroller.addToWardrobe(article);
+            	    controller.addToWardrobe(article);
         	}
         });
     }
@@ -188,7 +192,7 @@ public class AddItemPanel extends JPanel {
 	}
 	
 	public void setController(GUIController controller) {
-		this.controller = controller;
+		this.guicontroller = controller;
 	}
 
 }

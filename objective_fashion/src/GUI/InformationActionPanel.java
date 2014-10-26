@@ -8,6 +8,8 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
+import userProfile.Preferences;
+import controller.Controller;
 import clothing.variables.Formality;
 
 public class InformationActionPanel extends JPanel{
@@ -22,11 +24,14 @@ public class InformationActionPanel extends JPanel{
 	JTextArea weatherTextArea;
 	JButton createButton;
 	JComboBox formalityBox;
-	GUIController controller;
+	GUIController guicontroller;
+	Controller controller;
+	
 
-	public InformationActionPanel(GUIController controller) {
+	public InformationActionPanel(GUIController guicontroller, Controller controller) {
 		initComponents();
 		initLayout();
+		this.guicontroller = guicontroller;
 		this.controller = controller;
 		setPreferredSize(new java.awt.Dimension(200, 300));
         setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -59,7 +64,7 @@ public class InformationActionPanel extends JPanel{
         createButton.setText("Create Outfit");
         createButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                
+                controller.sendOutfit(new Preferences(getFormality()), getEmail());
             }
         });
 
@@ -132,6 +137,6 @@ public class InformationActionPanel extends JPanel{
 	}
 
 	public void setController(GUIController controller) {
-		this.controller = controller;
+		this.guicontroller = controller;
 	}
 }

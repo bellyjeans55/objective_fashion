@@ -5,6 +5,7 @@ import java.util.Vector;
 
 import clothing.generics.Accessories;
 import clothing.generics.Bottoms;
+import clothing.generics.Clothing;
 import clothing.generics.Outerwear;
 import clothing.generics.Shoes;
 import clothing.generics.Singletons;
@@ -30,6 +31,24 @@ public class Wardrobe {
 		singletons = new Vector<Singletons>();
 		socks = new Vector<Socks>();
 		tops = new Vector<Tops>();
+	}
+	
+	public void addToWardrobe(Clothing article) {
+		if (article instanceof Accessories) {
+			addAccessories((Accessories) article);
+		}
+		else if (article instanceof Bottoms)
+			addBottoms((Bottoms) article);
+		else if (article instanceof Outerwear)
+			addOuterwear((Outerwear) article);
+		else if (article instanceof Shoes)
+			addShoes((Shoes) article);
+		else if (article instanceof Singletons)
+			addSingletons((Singletons) article);
+		else if (article instanceof Socks)
+			addSocks((Socks) article);
+		else if (article instanceof Tops)
+			addTops((Tops) article);
 	}
 	
 	public void addAccessories(Accessories accessory) {
