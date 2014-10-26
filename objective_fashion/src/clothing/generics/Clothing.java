@@ -12,6 +12,13 @@ public abstract class Clothing {
 	Material material;
 	Boolean rainwear;
 	
+	public Clothing(Color color, Formality formality, AppropriateTemperature temperature) {
+		this.color = color;
+		this.formality = formality;
+		this.temperature = temperature;
+	}
+	
+	
 	public AppropriateTemperature getAppropriateTemperature() {
 		return temperature;
 	}
