@@ -15,6 +15,7 @@ import controller.Controller;
 	    /**
 	     * Creates new form objectiveGUI
 	     */
+	    
 	    public ObjectiveFashionGUI() {
 	    	controller = new Controller();
 	        initComponents();

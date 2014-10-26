@@ -15,6 +15,7 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 import clothing.Outfit;
+import externalVariables.Weather;
 
 public class Mailer {
 	//private static Outfit outfit; //does not need outfit variable
@@ -32,7 +33,7 @@ public class Mailer {
         String[] to = { recipient }; // list of recipient email addresses
         Date date = new Date();
         String subject = "Here is your outfit for " + DATEFORMAT.format(date);
-        String body = outfit.toString();
+        String body = "It is " + Weather.getTemperature() + " degrees outside.\n" + "There is a 0% chance of rain.\n" + outfit.toString();
         body += warnings;
 
         sendFromGMail(from, pass, to, subject, body);
