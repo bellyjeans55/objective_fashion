@@ -52,6 +52,6 @@ public class TheDecider {
 		Vector<Socks> socks = wardrobe.getSocks();
 
 		//assumes none of these Vectors are null for now. need to implement socks, accessories, singletons
-		return new Outfit(tops.get(0), bottoms.get(0), socks.get(0), shoes.get(0), outerWear.get(0), null, null);
+		return new Outfit(tops.get(0), bottoms.get(0), socks.get(0), shoes.get(0), null, null, null);
 	}
 }

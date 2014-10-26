@@ -20,7 +20,7 @@ public class State {
 			temperatureState = AppropriateTemperature.VERY_COLD;
 		else if (temperature < 40)
 			temperatureState = AppropriateTemperature.COLD;
-		else if (temperature < 55)
+		else if (temperature < 62)
 			temperatureState = AppropriateTemperature.COOL;
 		else if (temperature < 70)
 			temperatureState = AppropriateTemperature.WARM;
