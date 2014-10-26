@@ -6,8 +6,8 @@ import clothing.variables.Formality;
 import clothing.variables.Material;
 
 public class Socks extends Clothing {
-	public Socks (Color color, Formality formality, AppropriateTemperature temperature, Material material) {
-		super(color, formality, temperature);
+	public Socks (Color color, Material material) {
+		super(color);
 		this.material = material;
 	}
 	

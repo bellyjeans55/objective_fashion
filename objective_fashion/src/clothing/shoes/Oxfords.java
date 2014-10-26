@@ -8,9 +8,9 @@ import clothing.variables.Material;
 
 public class Oxfords extends Shoes {
 
-	public Oxfords(Color color, Formality formality,
-			AppropriateTemperature temperature, Material material) {
-		super(color, formality, temperature, material);
+	public Oxfords(Color color, Material material) {
+		super(color, material);
+		this.formality = Formality.BUSINESS_CASUAL;
 	}
 
 	public String toString() {

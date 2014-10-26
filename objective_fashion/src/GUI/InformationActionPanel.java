@@ -8,6 +8,8 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
+import clothing.variables.Formality;
+
 public class InformationActionPanel extends JPanel{
 	GroupLayout layout;
 	JComboBox typeBox;
@@ -46,7 +48,8 @@ public class InformationActionPanel extends JPanel{
 
         emailTextField.setText("Enter Email Here...");
 
-        formalityBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Formality", "Casual", "Smart Casual", "Business Casual", "Formal" }));
+        formalityBox.setModel(new javax.swing.DefaultComboBoxModel(new Formality[] { Formality.CASUAL, Formality.SMART_CASUAL, 
+        		Formality.BUSINESS_CASUAL, Formality.FORMAL}));
         formalityBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
             
@@ -65,6 +68,7 @@ public class InformationActionPanel extends JPanel{
         weatherTextArea.setText("Current Weather in Chapel Hill\nTemp (F): \nForecast:");
         weatherTextArea.setMaximumSize(new java.awt.Dimension(164, 94));
         weatherTextArea.setName(""); 
+        weatherTextArea.setEditable(false);
 
         preferencesLabel.setText("Preferences:");
 
@@ -118,6 +122,14 @@ public class InformationActionPanel extends JPanel{
                     .addContainerGap())
             );
     }
+	
+	public String getEmail() {
+		return emailTextField.getText();
+	}
+	
+	public Formality getFormality() {
+		return (Formality) formalityBox.getSelectedItem();
+	}
 
 	public void setController(GUIController controller) {
 		this.controller = controller;
