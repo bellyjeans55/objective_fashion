@@ -40,18 +40,13 @@ public class TheDecider {
 		Vector<Bottoms> bottoms = wardrobe.getBottoms(State.getTemperatureState(), preferences.getFormality());
 		Vector<Shoes> shoes = wardrobe.getShoes(State.getTemperatureState(), preferences.getFormality());
 		Vector<Socks> socks = wardrobe.getSocks();
-		if (outerWear.isEmpty())
-			;
-		if (tops.isEmpty())
-			;
-		if (bottoms.isEmpty())
-			;
-		if (shoes.isEmpty())
-			;
-		if (socks.isEmpty())
-			;
+
 		//assumes none of these Vectors are null for now. need to implement socks, accessories, singletons
-		return new Outfit(tops.get(0), bottoms.get(0), socks.get(0), shoes.get(0), outerWear.get(0), null, null);
+		return new Outfit(tops.isEmpty() ? null : tops.get(0), 
+				bottoms.isEmpty() ? null : bottoms.get(0), 
+				socks.isEmpty() ? null : socks.get(0), 
+				shoes.isEmpty() ? null : shoes.get(0),
+				outerWear.isEmpty() ? null : outerWear.get(0), null, null);
 	}
 	
 	public Outfit createHotOutfit(Preferences preferences, Wardrobe wardrobe) {
@@ -59,16 +54,12 @@ public class TheDecider {
 		Vector<Bottoms> bottoms = wardrobe.getBottoms(State.getTemperatureState(), preferences.getFormality());
 		Vector<Shoes> shoes = wardrobe.getShoes(State.getTemperatureState(), preferences.getFormality());
 		Vector<Socks> socks = wardrobe.getSocks();
-		String warnings;
-		if (tops.isEmpty())
-			;
-		if (bottoms.isEmpty())
-			;
-		if (shoes.isEmpty())
-			;
-		if (socks.isEmpty())
-			;
+
 		//assumes none of these Vectors are null for now. need to implement socks, accessories, singletons
-		return new Outfit(tops.get(0), bottoms.get(0), socks.get(0), shoes.get(0), null, null, null);
+		return new Outfit(tops.isEmpty() ? null : tops.get(0), 
+				bottoms.isEmpty() ? null : bottoms.get(0), 
+				socks.isEmpty() ? null : socks.get(0), 
+				shoes.isEmpty() ? null : shoes.get(0),
+				null, null, null);
 	}
 }

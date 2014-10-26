@@ -6,7 +6,7 @@ public enum Material {
 public String toString() {
 	String str = "";
 	switch(this) {
-	case BROADCLOTH: str = "Breadcloth";
+	case BROADCLOTH: str = "Broadcloth";
 		break;
 	case CANVAS: str = "Canvas";
 		break;

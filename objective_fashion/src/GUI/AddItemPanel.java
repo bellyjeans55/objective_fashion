@@ -81,7 +81,7 @@ public class AddItemPanel extends JPanel {
         materialBox.setModel(new javax.swing.DefaultComboBoxModel(new Material[] 
         		{ Material.BROADCLOTH, Material.CANVAS, Material.CHINO, 
         		Material.COTTON, Material.DENIM, Material.FLANNEL, Material.LEATHER, Material.OXFORD, 
-        		Material.SUEDE, Material.WOOL }));
+        		Material.PINPOINT, Material.SUEDE, Material.WOOL }));
         materialBox.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
         		updateItemBox();
