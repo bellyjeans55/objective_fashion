@@ -10,7 +10,8 @@ public class Romper extends Singletons{
 
 	public Romper(Color color, Formality formality,
 			AppropriateTemperature temperature, Material material) {
-		super(color, formality, temperature, material);
+		super(color, material);
+		
 	}
 
 	public String toString() {
