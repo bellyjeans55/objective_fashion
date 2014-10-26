@@ -31,6 +31,7 @@ public class Controller {
 		decider = new TheDecider();
 		wardrobe = new Wardrobe();
 		preferences = new Preferences(Formality.CASUAL);
+		randomPopulateWardrobe();
 		profile = new UserProfile(wardrobe, preferences);
 	}
 	
