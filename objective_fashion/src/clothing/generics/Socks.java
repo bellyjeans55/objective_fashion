@@ -8,4 +8,9 @@ public class Socks extends Clothing {
 		this.color = color;
 		this.material = material;
 	}
+	
+	public String toString() {
+		return this.getColor().toString() + " "
+				+ this.getMaterial().toString().toLowerCase() + " socks";
+	}
 }

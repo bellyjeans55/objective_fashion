@@ -40,12 +40,12 @@ public class Outfit {
 			str += "Top: " + top.toString();
 			str += "\nBottom: " + bottom.toString();
 		}
-		str += "Socks: " + socks.toString();
-		str += "Shoes: " + shoes.toString();
+		str += "\nSocks: " + socks.toString();
+		str += "\nShoes: " + shoes.toString();
 		if (outerwear != null) {
 			str += "\nOuterwear: " + outerwear.toString();
 		}
-		if (accessories.length > 0) {
+		if (accessories != null && accessories.length > 0) {
 			str += "\nAccessories:";
 			for (int i = 0; i < accessories.length; i++) {
 				str += " " + accessories[i].toString();

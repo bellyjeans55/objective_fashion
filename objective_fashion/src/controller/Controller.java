@@ -60,10 +60,10 @@ public class Controller {
 		socks.setFormality(Formality.CASUAL);
 		socks.setAppropriateTemperature(AppropriateTemperature.COOL);
 		wardrobe.addSocks(socks);
-		Tops hoodie = new Hoodie(Color.WHITE, Material.LEATHER);
-		hoodie.setFormality(Formality.CASUAL);
-		hoodie.setAppropriateTemperature(AppropriateTemperature.COOL);
-		wardrobe.addTops(hoodie);
+		Tops buttonup = new ButtonUp(Color.WHITE, Material.LEATHER);
+		buttonup.setFormality(Formality.CASUAL);
+		buttonup.setAppropriateTemperature(AppropriateTemperature.COOL);
+		wardrobe.addTops(buttonup);
 	}
 	
 	/**
