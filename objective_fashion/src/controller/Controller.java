@@ -36,33 +36,19 @@ public class Controller {
 	}
 	
 	public void randomPopulateWardrobe() {
-		Accessories ring = new Ring();
-		ring.setAppropriateTemperature(AppropriateTemperature.COOL);
-		ring.setFormality(Formality.CASUAL);
+		Accessories ring = new Ring(Color.GREY, Formality.CASUAL, AppropriateTemperature.COOL);
 		wardrobe.addAccessories(ring);
-		Bottoms pants = new Pants(Color.BLACK, Material.DENIM);
-		pants.setAppropriateTemperature(AppropriateTemperature.COOL);
-		pants.setFormality(Formality.CASUAL);
+		Bottoms pants = new Pants(Color.BLACK, Formality.CASUAL, AppropriateTemperature.COOL, Material.DENIM);
 		wardrobe.addBottoms(pants);
-		Outerwear bomber = new Bomber(Color.BLACK, Material.SUEDE);
-		bomber.setFormality(Formality.CASUAL);
-		bomber.setAppropriateTemperature(AppropriateTemperature.COOL);
+		Outerwear bomber = new Bomber(Color.BLACK, Formality.CASUAL, AppropriateTemperature.COOL, Material.SUEDE);
 		wardrobe.addOuterwear(bomber);
-		Shoes boots = new Boots(Color.BLACK, Material.LEATHER);
-		boots.setFormality(Formality.CASUAL);
-		boots.setAppropriateTemperature(AppropriateTemperature.COOL);
+		Shoes boots = new Boots(Color.BLACK, Formality.CASUAL, AppropriateTemperature.COOL, Material.LEATHER);
 		wardrobe.addShoes(boots);
-		Singletons romper = new Romper(Color.RED, Material.FLANNEL);
-		romper.setFormality(Formality.CASUAL);
-		romper.setAppropriateTemperature(AppropriateTemperature.COOL);
+		Singletons romper = new Romper(Color.RED, Formality.CASUAL, AppropriateTemperature.COOL, Material.FLANNEL);
 		wardrobe.addSingletons(romper);
-		Socks socks = new Socks(Color.GREY, Material.WOOL);
-		socks.setFormality(Formality.CASUAL);
-		socks.setAppropriateTemperature(AppropriateTemperature.COOL);
+		Socks socks = new Socks(Color.GREY, Formality.CASUAL, AppropriateTemperature.COOL, Material.WOOL);
 		wardrobe.addSocks(socks);
-		Tops buttonup = new ButtonUp(Color.WHITE, Material.LEATHER);
-		buttonup.setFormality(Formality.CASUAL);
-		buttonup.setAppropriateTemperature(AppropriateTemperature.COOL);
+		Tops buttonup = new ButtonUp(Color.WHITE, Formality.CASUAL, AppropriateTemperature.COOL, Material.LEATHER);
 		wardrobe.addTops(buttonup);
 	}
 	
