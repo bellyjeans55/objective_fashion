@@ -29,6 +29,14 @@ public class Outfit {
 		this.accessories=accessories;
 	}
 	
+	public Tops getTop() {return top;}
+	public Bottoms getBottom() {return bottom;}
+	public Socks getSocks() {return socks;}
+	public Shoes getShoes() {return shoes;}
+	public Outerwear getOuterwear() {return outerwear;}
+	public Singletons getSingleton() {return singleton;}
+	public Accessories[] getAccessories() {return accessories;}
+	
 	/**
 	 * string representation of outfit
 	 */
@@ -37,11 +45,15 @@ public class Outfit {
 		if (singleton != null) {
 			str += singleton.toString();
 		} else {
-			str += top.toString();
-			str += "\n" + bottom.toString();
+			if (top != null)
+				str += top.toString();
+			if (bottom != null)
+				str += "\n" + bottom.toString();
 		}
-		str += "\n" + socks.toString();
-		str += "\n" + shoes.toString();
+		if (socks != null)
+			str += "\n" + socks.toString();
+		if (shoes != null)
+			str += "\n" + shoes.toString();
 		if (outerwear != null) {
 			str += "\n" + outerwear.toString();
 		}
