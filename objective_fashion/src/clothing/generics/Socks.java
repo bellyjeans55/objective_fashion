@@ -1,5 +1,11 @@
 package clothing.generics;
 
-public class Socks extends Clothing {
+import clothing.variables.Color;
+import clothing.variables.Material;
 
+public class Socks extends Clothing {
+	public Socks (Color color, Material material) {
+		this.color = color;
+		this.material = material;
+	}
 }
