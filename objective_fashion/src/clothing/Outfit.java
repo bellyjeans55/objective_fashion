@@ -35,18 +35,18 @@ public class Outfit {
 	public String toString() {
 		String str = "";
 		if (singleton != null) {
-			str += "One piece: " + singleton.toString();
+			str += singleton.toString();
 		} else {
-			str += "Top: " + top.toString();
-			str += "\nBottom: " + bottom.toString();
+			str += top.toString();
+			str += "\n" + bottom.toString();
 		}
-		str += "\nSocks: " + socks.toString();
-		str += "\nShoes: " + shoes.toString();
+		str += "\n" + socks.toString();
+		str += "\n" + shoes.toString();
 		if (outerwear != null) {
-			str += "\nOuterwear: " + outerwear.toString();
+			str += "\n" + outerwear.toString();
 		}
 		if (accessories != null && accessories.length > 0) {
-			str += "\nAccessories:";
+			str += "\n";
 			for (int i = 0; i < accessories.length; i++) {
 				str += " " + accessories[i].toString();
 			}
