@@ -11,10 +11,9 @@ import clothing.singletons.Romper;
 import clothing.tops.*;
 
 public class TheDecider {
-	State state;
 	
 	public TheDecider() {
-		state = new State();
+		
 	}
 	
 	/**
@@ -24,7 +23,7 @@ public class TheDecider {
 	 * @return
 	 */
 	public Outfit decideOutfit(Preferences preferences, Wardrobe wardrobe) {
-		AppropriateTemperature temperature = state.getTemperatureState();
+		AppropriateTemperature temperature = State.getTemperatureState();
 		switch (temperature) {
 		case VERY_COLD: return createColdOutfit(preferences, wardrobe); //these method calls are very abstract for now 
 		case COLD: return createColdOutfit(preferences, wardrobe);  
@@ -36,20 +35,20 @@ public class TheDecider {
 	}
 	
 	public Outfit createColdOutfit(Preferences preferences, Wardrobe wardrobe) {
-		Vector<Outerwear> outerWear = wardrobe.getOuterwear(state.getTemperatureState(), preferences.getFormality());
-		Vector<Tops> tops = wardrobe.getTops(state.getTemperatureState(), preferences.getFormality());
-		Vector<Bottoms> bottoms = wardrobe.getBottoms(state.getTemperatureState(), preferences.getFormality());
-		Vector<Shoes> shoes = wardrobe.getShoes(state.getTemperatureState(), preferences.getFormality());
+		Vector<Outerwear> outerWear = wardrobe.getOuterwear(State.getTemperatureState(), preferences.getFormality());
+		Vector<Tops> tops = wardrobe.getTops(State.getTemperatureState(), preferences.getFormality());
+		Vector<Bottoms> bottoms = wardrobe.getBottoms(State.getTemperatureState(), preferences.getFormality());
+		Vector<Shoes> shoes = wardrobe.getShoes(State.getTemperatureState(), preferences.getFormality());
 		
 		//assumes none of these Vectors are null for now. need to implement socks, accessories, singletons
 		return new Outfit(tops.get(0), bottoms.get(0), new Socks(), shoes.get(0), outerWear.get(0), new Romper(), new Accessories[1]);
 	}
 	
 	public Outfit createHotOutfit(Preferences preferences, Wardrobe wardrobe) {
-		Vector<Outerwear> outerWear = wardrobe.getOuterwear(state.getTemperatureState(), preferences.getFormality());
-		Vector<Tops> tops = wardrobe.getTops(state.getTemperatureState(), preferences.getFormality());
-		Vector<Bottoms> bottoms = wardrobe.getBottoms(state.getTemperatureState(), preferences.getFormality());
-		Vector<Shoes> shoes = wardrobe.getShoes(state.getTemperatureState(), preferences.getFormality());
+		Vector<Outerwear> outerWear = wardrobe.getOuterwear(State.getTemperatureState(), preferences.getFormality());
+		Vector<Tops> tops = wardrobe.getTops(State.getTemperatureState(), preferences.getFormality());
+		Vector<Bottoms> bottoms = wardrobe.getBottoms(State.getTemperatureState(), preferences.getFormality());
+		Vector<Shoes> shoes = wardrobe.getShoes(State.getTemperatureState(), preferences.getFormality());
 		
 		//assumes none of these Vectors are null for now. need to implement socks, accessories, singletons
 		return new Outfit(tops.get(0), bottoms.get(0), new Socks(), shoes.get(0), outerWear.get(0), new Romper(), new Accessories[1]);
