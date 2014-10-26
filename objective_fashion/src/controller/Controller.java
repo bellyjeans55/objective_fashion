@@ -36,19 +36,19 @@ public class Controller {
 	}
 	
 	public void randomPopulateWardrobe() {
-		Accessories ring = new Ring(Color.GREY, Formality.CASUAL, AppropriateTemperature.COOL);
+		Accessories ring = new Ring(Color.GREY);
 		wardrobe.addAccessories(ring);
-		Bottoms pants = new Pants(Color.BLACK, Formality.CASUAL, AppropriateTemperature.COOL, Material.DENIM);
+		Bottoms pants = new Pants(Color.BLACK, Material.DENIM);
 		wardrobe.addBottoms(pants);
-		Outerwear bomber = new Bomber(Color.BLACK, Formality.CASUAL, AppropriateTemperature.COOL, Material.SUEDE);
+		Outerwear bomber = new Bomber(Color.BLACK, Material.SUEDE);
 		wardrobe.addOuterwear(bomber);
-		Shoes boots = new Boots(Color.BLACK, Formality.CASUAL, AppropriateTemperature.COOL, Material.LEATHER);
+		Shoes boots = new Boots(Color.BLACK, Material.LEATHER);
 		wardrobe.addShoes(boots);
-		Singletons romper = new Romper(Color.RED, Formality.CASUAL, AppropriateTemperature.COOL, Material.FLANNEL);
+		Singletons romper = new Romper(Color.RED, Material.FLANNEL);
 		wardrobe.addSingletons(romper);
-		Socks socks = new Socks(Color.GREY, Formality.CASUAL, AppropriateTemperature.COOL, Material.WOOL);
+		Socks socks = new Socks(Color.GREY, Material.WOOL);
 		wardrobe.addSocks(socks);
-		Tops buttonup = new ButtonUp(Color.WHITE, Formality.CASUAL, AppropriateTemperature.COOL, Material.LEATHER);
+		Tops buttonup = new ButtonUp(Color.WHITE, Material.LEATHER);
 		wardrobe.addTops(buttonup);
 	}
 	
