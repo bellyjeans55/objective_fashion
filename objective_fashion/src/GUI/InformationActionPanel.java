@@ -10,7 +10,6 @@ import javax.swing.JTextField;
 
 public class InformationActionPanel extends JPanel{
 	GroupLayout layout;
-	IAPController controller;
 	JComboBox typeBox;
 	JComboBox itemBox;
 	JComboBox colorBox;
@@ -21,10 +20,14 @@ public class InformationActionPanel extends JPanel{
 	JTextArea weatherTextArea;
 	JButton createButton;
 	JComboBox formalityBox;
+	GUIController controller;
 
-	public InformationActionPanel() {
+	public InformationActionPanel(GUIController controller) {
 		initComponents();
-		controller = new IAPController();
+		initLayout();
+		this.controller = controller;
+		setPreferredSize(new java.awt.Dimension(200, 300));
+        setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 	}
 	
 	public void initComponents() {
@@ -38,6 +41,35 @@ public class InformationActionPanel extends JPanel{
 		preferencesLabel = new JLabel();
 		weatherTextArea = new JTextArea();
 		createButton = new JButton();
+
+        emailLabel.setText("Email:");
+
+        emailTextField.setText("Enter Email Here...");
+
+        formalityBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Formality", "Casual", "Smart Casual", "Business Casual", "Formal" }));
+        formalityBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            
+            }
+        });
+
+        createButton.setText("Create Outfit");
+        createButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                
+            }
+        });
+
+        weatherTextArea.setColumns(20);
+        weatherTextArea.setRows(5);
+        weatherTextArea.setText("Current Weather in Chapel Hill\nTemp (F): \nForecast:");
+        weatherTextArea.setMaximumSize(new java.awt.Dimension(164, 94));
+        weatherTextArea.setName(""); 
+
+        preferencesLabel.setText("Preferences:");
+
+        objectiveFashionLabel.setFont(new java.awt.Font("Tahoma", 0, 24)); 
+        objectiveFashionLabel.setText("Objective Fashion");
 	}
 	public void initLayout() {
     	layout = new javax.swing.GroupLayout(this);
@@ -86,4 +118,8 @@ public class InformationActionPanel extends JPanel{
                     .addContainerGap())
             );
     }
+
+	public void setController(GUIController controller) {
+		this.controller = controller;
+	}
 }

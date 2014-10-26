@@ -1,5 +1,6 @@
 package GUI;
 
+import javax.swing.DefaultListModel;
 import javax.swing.GroupLayout;
 import javax.swing.JLabel;
 import javax.swing.JList;
@@ -11,23 +12,31 @@ public class WardrobePanel extends JPanel{
 	private JScrollPane wardrobeScrollPane;
 	private JLabel wardrobeLabel;
 	private GroupLayout layout;
-	private WardrobePanelController controller;
+	private GUIController controller;
 	
-	public WardrobePanel() {
+	public WardrobePanel(GUIController controller) {
+		initComponents();
+		initLayout();
+		this.controller = controller;
+	}
+	
+	public JList getWardrobeList() {
+		return wardrobeList;
+	}
+	
+	public void initComponents() {
 		wardrobeScrollPane = new JScrollPane();
 		wardrobeList = new JList();
 		wardrobeLabel = new JLabel();
-		controller = new WardrobePanelController(wardrobeList);
 		wardrobeLabel.setText("Wardrobe List");
+		setBorder(javax.swing.BorderFactory.createEtchedBorder());
 		
-		wardrobeList.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
+		wardrobeList.setModel(new DefaultListModel());
         wardrobeScrollPane.setViewportView(wardrobeList);
-		
-        layout = new GroupLayout(this);
+	}
+	
+	public void initLayout() {
+		layout = new GroupLayout(this);
         setLayout(layout);
         layout.setHorizontalGroup(
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -44,6 +53,10 @@ public class WardrobePanel extends JPanel{
                     .addComponent(wardrobeScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 466, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             );
+	}
+	
+	public void setController(GUIController controller) {
+		this.controller = controller;
 	}
 
 }
