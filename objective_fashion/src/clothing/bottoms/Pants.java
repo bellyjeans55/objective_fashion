@@ -1,14 +1,19 @@
 package clothing.bottoms;
 
 import clothing.generics.Bottoms;
+import clothing.variables.AppropriateTemperature;
 import clothing.variables.Color;
+import clothing.variables.Formality;
 import clothing.variables.Material;
 
 public class Pants extends Bottoms {
 
-	public Pants(Color color, Material material) {
-		super(color, material);
+	
+	public Pants(Color color, Formality formality,
+			AppropriateTemperature temperature, Material material) {
+		super(color, formality, temperature, material);
 	}
+
 	public String toString() {
 		String output = "";
 		if (this.getMaterial() == Material.DENIM)

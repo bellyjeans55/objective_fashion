@@ -1,12 +1,16 @@
 package clothing.shoes;
 
 import clothing.generics.Shoes;
+import clothing.variables.AppropriateTemperature;
 import clothing.variables.Color;
+import clothing.variables.Formality;
 import clothing.variables.Material;
 
 public class Boots extends Shoes {
-	public Boots(Color color, Material material) {
-		super(color, material);
+
+	public Boots(Color color, Formality formality,
+			AppropriateTemperature temperature, Material material) {
+		super(color, formality, temperature, material);
 	}
 
 	public String toString() {
