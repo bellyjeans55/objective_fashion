@@ -1,5 +1,5 @@
 package clothing.variables;
 
 public enum Material {
-	DENIM, CHINO, COTTON, WOOL, FLANNEL, OXFORD, BROADCLOTH;
+	DENIM, CHINO, COTTON, WOOL, FLANNEL, OXFORD, BROADCLOTH, SUEDE, CANVAS;
 }
