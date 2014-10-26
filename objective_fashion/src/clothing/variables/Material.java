@@ -1,7 +1,7 @@
 package clothing.variables;
 
 public enum Material {
-	BROADCLOTH, CANVAS, CHINO, COTTON, DENIM, FLANNEL, LEATHER, OXFORD, SUEDE, WOOL;
+	BROADCLOTH, CANVAS, CHINO, COTTON, DENIM, FLANNEL, LEATHER, OXFORD, PINPOINT, SUEDE, WOOL;
 
 public String toString() {
 	String str = "";
@@ -21,6 +21,8 @@ public String toString() {
 	case LEATHER: str = "Leather";
 		break;
 	case OXFORD: str = "Oxford";
+		break;
+	case PINPOINT: str = "Pinpoint";
 		break;
 	case SUEDE: str = "Suede";
 		break;
