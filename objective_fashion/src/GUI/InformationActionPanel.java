@@ -71,7 +71,7 @@ public class InformationActionPanel extends JPanel{
 
         weatherTextArea.setColumns(20);
         weatherTextArea.setRows(3);
-        weatherTextArea.setText("Current Weather in Chapel Hill\nTemp (F): " + Weather.getTemperature() + "degrees");
+        weatherTextArea.setText("Current Weather in Chapel Hill\nTemp (F): " + Weather.getTemperature() + " degrees");
         weatherTextArea.setMaximumSize(new java.awt.Dimension(164, 64));
         weatherTextArea.setName(""); 
         weatherTextArea.setEditable(false);
