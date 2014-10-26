@@ -1,5 +1,8 @@
 package GUI;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.GroupLayout;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -46,6 +49,12 @@ public class AddItemPanel extends JPanel {
         
         
         addButton.setText("Add to Wardrobe");
+        addButton.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		System.out.println("lol");
+        	}
+        });
+        
 		addItemLabel = new JLabel("Add Item");
 		layout = new GroupLayout(this);
         setLayout(layout);
