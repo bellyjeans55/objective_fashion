@@ -124,7 +124,7 @@ public class AddItemPanel extends JPanel {
     	Color color = (Color) colorBox.getSelectedItem();
     	Material material = (Material) materialBox.getSelectedItem();
     	switch ((String) typeBox.getSelectedItem()) {
-    	case "Accessories": items = new Clothing[] {new Ring()};
+    	case "Accessories": items = new Clothing[] {new Ring(color)};
     	break;
     	case "Bottoms": items = new Clothing[] {new Pants(color, material), 
     			new Shorts(color, material), new Skirt(color, material)};

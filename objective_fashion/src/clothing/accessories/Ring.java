@@ -6,9 +6,10 @@ import clothing.variables.Color;
 import clothing.variables.Formality;
 
 public class Ring extends Accessories{
-	public Ring(Color color, Formality formality,
-			AppropriateTemperature temperature) {
-		super(color, formality, temperature);
+	public Ring(Color color) {
+		super(color);
+		this.formality = Formality.FORMAL;
+		this.temperature = AppropriateTemperature.ANY;
 	}
 
 	public String toString() {
