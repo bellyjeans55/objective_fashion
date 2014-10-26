@@ -75,6 +75,15 @@ public class Wardrobe {
 				appropriateBottoms.add(item);
 			}
 		}
+		if(appropriateBottoms.isEmpty()) {
+			iterator = bottoms.iterator();
+			while(iterator.hasNext()) {
+				Bottoms item = iterator.next();
+				if(item.getFormality() == formality) {
+					appropriateBottoms.add(item);
+				}
+			}
+		}
 		return appropriateBottoms;
 	}
 	
@@ -89,6 +98,15 @@ public class Wardrobe {
 				appropriateOuterwear.add(item);
 			}
 		}
+		if(appropriateOuterwear.isEmpty()) {
+			iterator = outerwear.iterator();
+			while(iterator.hasNext()) {
+				Outerwear item = iterator.next();
+				if(item.getFormality() == formality) {
+					appropriateOuterwear.add(item);
+				}
+			}
+		}
 		return appropriateOuterwear;
 	}
 	
@@ -101,6 +119,15 @@ public class Wardrobe {
 			if(item.getFormality() == formality 
 					&& item.getAppropriateTemperature() == temp) {
 				appropriateShoes.add(item);
+			}
+		}
+		if(appropriateShoes.isEmpty()) {
+			iterator = shoes.iterator();
+			while(iterator.hasNext()) {
+				Shoes item = iterator.next();
+				if(item.getFormality() == formality) {
+					appropriateShoes.add(item);
+				}
 			}
 		}
 		return appropriateShoes;
@@ -123,6 +150,15 @@ public class Wardrobe {
 			if(item.getFormality() == formality 
 					&& item.getAppropriateTemperature() == temp) {
 				appropriateTops.add(item);
+			}
+		}
+		if(appropriateTops.isEmpty()) {
+			iterator = tops.iterator();
+			while(iterator.hasNext()) {
+				Tops item = iterator.next();
+				if(item.getFormality() == formality) {
+					appropriateTops.add(item);
+				}
 			}
 		}
 		return appropriateTops;
