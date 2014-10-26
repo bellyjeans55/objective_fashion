@@ -20,7 +20,7 @@ public class Mailer {
 	//private static Outfit outfit; //does not need outfit variable
 	private static String USER_NAME = "objectivefashion";  // GMail user name (just the part before "@gmail.com")
 	private static String PASSWORD = "rafdidasrhot"; // GMail password
-	private static DateFormat DATEFORMAT = new SimpleDateFormat("yyyy/MM/dd");
+	private static DateFormat DATEFORMAT = new SimpleDateFormat("yyyy-MM-dd");
 	
 	
 
