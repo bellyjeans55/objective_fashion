@@ -13,6 +13,10 @@ import clothing.tops.*;
 public class TheDecider {
 	State state;
 	
+	public TheDecider() {
+		state = new State();
+	}
+	
 	/**
 	 * Based on variables, intelligently instantiate one outfit and return it.
 	 * @param preferences

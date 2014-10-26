@@ -8,6 +8,7 @@ import clothing.outerwear.*;
 import clothing.shoes.*;
 import clothing.singletons.*;
 import clothing.tops.*;
+import clothing.variables.AppropriateTemperature;
 import clothing.variables.Formality;
 import userProfile.Preferences;
 import userProfile.UserProfile;
@@ -33,13 +34,34 @@ public class Controller {
 	}
 	
 	public void randomPopulateWardrobe() {
-		wardrobe.addAccessories(new Ring());
-		wardrobe.addBottoms(new Pants());
-		wardrobe.addOuterwear(new Bomber());
-		wardrobe.addShoes(new Boots());
-		wardrobe.addSingletons(new Romper());
-		wardrobe.addSocks(new Socks());
-		wardrobe.addTops(new Hoodie());
+		Accessories ring = new Ring();
+		ring.setAppropriateTemperature(AppropriateTemperature.COOL);
+		ring.setFormality(Formality.CASUAL);
+		wardrobe.addAccessories(ring);
+		Bottoms pants = new Pants();
+		pants.setAppropriateTemperature(AppropriateTemperature.COOL);
+		pants.setFormality(Formality.CASUAL);
+		wardrobe.addBottoms(pants);
+		Outerwear bomber = new Bomber();
+		bomber.setFormality(Formality.CASUAL);
+		bomber.setAppropriateTemperature(AppropriateTemperature.COOL);
+		wardrobe.addOuterwear(bomber);
+		Shoes boots = new Boots();
+		boots.setFormality(Formality.CASUAL);
+		boots.setAppropriateTemperature(AppropriateTemperature.COOL);
+		wardrobe.addShoes(boots);
+		Singletons romper = new Romper();
+		romper.setFormality(Formality.CASUAL);
+		romper.setAppropriateTemperature(AppropriateTemperature.COOL);
+		wardrobe.addSingletons(romper);
+		Socks socks = new Socks();
+		socks.setFormality(Formality.CASUAL);
+		socks.setAppropriateTemperature(AppropriateTemperature.COOL);
+		wardrobe.addSocks(socks);
+		Tops hoodie = new Hoodie();
+		hoodie.setFormality(Formality.CASUAL);
+		hoodie.setAppropriateTemperature(AppropriateTemperature.COOL);
+		wardrobe.addTops(hoodie);
 	}
 	
 	/**
