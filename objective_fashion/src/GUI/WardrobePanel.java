@@ -11,11 +11,13 @@ public class WardrobePanel extends JPanel{
 	private JScrollPane wardrobeScrollPane;
 	private JLabel wardrobeLabel;
 	private GroupLayout layout;
+	private WardrobePanelController controller;
 	
 	public WardrobePanel() {
 		wardrobeScrollPane = new JScrollPane();
 		wardrobeList = new JList();
 		wardrobeLabel = new JLabel();
+		controller = new WardrobePanelController(wardrobeList);
 		wardrobeLabel.setText("Wardrobe List");
 		
 		wardrobeList.setModel(new javax.swing.AbstractListModel() {
