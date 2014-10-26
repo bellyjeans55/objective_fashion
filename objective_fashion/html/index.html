@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Objective Fashion</title>
+    <link type="text/css" rel="stylesheet" title="default" href="stylesheet.css"/>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+	$(document).ready(function(){
+            $("#user_info_panel").css("height", window.innerHeight * 0.48);
+            $("#add_item_panel").css("height", window.innerHeight * 0.48);
+            $("#wardrobe_list").css("height", window.innerHeight * 0.97);
+	    $("#add_to_wardrobe_button").click(function(){
+		var $item = $("#category").val() + $("#color").val() + $("#material").val();
+		$("wardrobe_holder").append('<>') //attempting to add a new div via appending
+	    })
+        });
+	alert('test');
+    </script>
+</head>
+    
+<body>
+    <div id="left_panels">
+	<div id="user_info_panel">
+	    <h1>Objective Fashion</h1>
+	    
+	    <label for="email">Email: </label>
+	    <input type="text" name="email" id="email_input"/>
+	    <label for="formality">Preferences:</label>
+	    <form id="preferences_selector">
+	    <select>
+	        <option value="casual">Casual</option>
+	        <option value="smart_casual">Smart Casual</option>
+	        <option value="bizcaz">Business Casual</option>
+	        <option value="formal">Formal</option>
+            </select>
+	    </form>
+	    <div id="weather_panel">Current Weather in Chapel Hill:<br>54 Degrees and Raining</div>
+	    <div id="outfit_submit"><span>Create Outfit</span></div>
+	</div>
+    </div>
+<div id="right_panels">
+    <div id="wardrobe_list">
+        <h3>Wardrobe List</h3>
+        <div id="wardrobe_holder">
+            <div class="wardrobe_item">Black suede bomber</div>
+            <div class="wardrobe_item">Brown corduroy pants</div>
+            <div class="wardrobe_item">Tan wool coat</div>
+	  
+	   
+        </div>
+    </div>
+    
+    <div id="add_item_panel">
+        <h3>Add Item</h3>
+        <form id=category>
+            <select>
+            <option value="casual">Item Type</option>
+            <option value="accessories">Accessories</option>
+            <option value="bottoms">Bottoms</option>
+            <option value="singletons">One Piece</option>
+            <option value="outerwear">Outerwear</option>
+            <option value="tops">Tops</option>
+            <option value="shoes">Shoes</option>
+            <option value="socks">Socks</option>
+            </select>
+        </form>
+        <form id=color>
+            <select>
+            <option value="color">Color</option>
+            <option value="blue">Blue</option>
+            <option value="black">Black</option>
+            <option value="brown">Brown</option>
+            <option value="burgundy">Burgundy</option>
+            <option value="dark_blue">Dark Blue</option>
+            <option value="dark_green">Dark Green</option>
+            <option value="gold">Gold</option>
+            <option value="green">Green</option>
+            <option value="grey">Grey</option>
+            <option value="light_blue">Light Blue</option>
+            <option value="light_green">Light Green</option>
+            <option value="orange">Orange</option>
+            <option value="pink">Pink</option>
+            <option value="purple">Purple</option>
+            <option value="red">Red</option>
+            <option value="silver">Silver</option>
+            <option value="tan">Tan</option>
+            <option value="yellow">Yellow</option>
+            <option value="white">White</option>
+            </select>
+        </form>
+        <form id=material>
+            <select>
+            <option value="casual">Fabric</option>
+            <option value="broadcloth">Broadcloth</option>
+            <option value="canvas">Canvas</option>
+            <option value="chino">Chino</option>
+            <option value="cotton">Cotton</option>
+            <option value="denim">Denim</option>
+            <option value="flannel">Flannel</option>
+            <option value="fleece">Fleece</option>
+            <option value="leather">Leather</option>
+            <option value="oxford">Oxford</option>
+            <option value="pinpoint">Pinpoint</option>
+            <option value="suede">Suede</option>
+            <option value="wool">Wool</option>
+            
+            </select>
+        </form>
+        <form id="item_selector">
+            <select>
+            <option value="casual">Item</option>
+            <option>Fill this with jquery</option>
+            </select>
+        </form>
+	<div id="add_to_wardrobe_button">Add to Wardrobe</div>
+    </div>
+</div>
+</body>
+</html>

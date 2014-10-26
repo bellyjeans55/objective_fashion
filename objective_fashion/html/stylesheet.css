@@ -1,0 +1,96 @@
+@font-face {
+    font-family: dubiel;
+    src: url(./fonts/DUBIEL.TTF);
+}
+
+body {
+    font-family: Lucida Sans Unicode;
+    color: white;
+    background-image: url(./images/4.jpg);
+    background-color: black;
+}
+
+h3 {
+    font-size: 33px;
+}
+
+span {
+    color: #48458C;
+}
+
+
+#right_panels {
+   position: fixed;
+   right: 0px;
+    
+    width: 33%;
+    float: right;
+    border: 2px white groove;
+    /*height: 800px;*/
+    padding: 1em;
+}
+
+#right_panels div {
+    width: 100%;
+}
+
+#add_item_panel {
+    /*border: 1px solid black;*/
+    float: right;
+    
+}
+
+#add_item_panel form {
+    display: inline;
+}
+
+#add_to_wardrobe_button {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#email_input {
+    width: 160px;
+}
+#left_panels {
+    float: left;
+    text-align: center;
+    width: 66%;
+}
+#outfit_submit {
+    background: white;
+    border-radius: 7px;
+    cursor: pointer;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    height: 30px;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    /*text-shadow: 1px 0px #868f9d, 0px 1px #868f9d, -1px 0px #868f9d, 0px -1px #868f9d;*/
+    
+}
+#preferences_selector {
+    display: inline;
+}
+#wardrobe_list {
+   position: ;
+    right: 0px;
+    padding-bottom: 1em;
+    border-bottom: 1px white groove;
+    float: right;
+    width: 35%;
+}
+
+#user_info_panel {
+    /*border: 1px solid black;*/
+}
+
+#user_info_panel h1 {
+    font-size: 45px;
+}
+#weather_panel {
+    margin-top: 20px;
+}
