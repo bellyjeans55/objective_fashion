@@ -7,15 +7,17 @@ import javax.swing.GroupLayout;
 		private InformationActionPanel informationActionPanel;
 	    private WardrobePanel wardrobePanel;
 	    private AddItemPanel addItemPanel;
-	    private javax.swing.JLabel jLabel1;
-	    private javax.swing.JList jList2;
-	    private javax.swing.JScrollPane jScrollPane2;
+	    private GUIController controller;
 	    
 	    /**
 	     * Creates new form objectiveGUI
 	     */
 	    public ObjectiveFashionGUI() {
 	        initComponents();
+	        controller = new GUIController(informationActionPanel, wardrobePanel, addItemPanel);
+	        informationActionPanel.setController(controller);
+	        wardrobePanel.setController(controller);
+	        addItemPanel.setController(controller);
 	    }
 
 	    /**
@@ -24,9 +26,9 @@ import javax.swing.GroupLayout;
 	    @SuppressWarnings("unchecked")
 	    private void initComponents() {
 
-	        addItemPanel = new AddItemPanel();
-	        informationActionPanel = new InformationActionPanel();
-	        wardrobePanel = new WardrobePanel();
+	        addItemPanel = new AddItemPanel(controller);
+	        informationActionPanel = new InformationActionPanel(controller);
+	        wardrobePanel = new WardrobePanel(controller);
 
 	        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
